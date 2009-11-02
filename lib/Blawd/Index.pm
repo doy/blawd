@@ -28,8 +28,8 @@ has content => (
 );
 
 sub _build_content {
+   "<h1>$_[0]->{title}</h1>".
     join '', map {
-        my $title = $_->title;
         my $text  = $_->render_as_fragment;
         my $link  = $_->link;
         qq[\n\n<div class="entry">$text\n<a href="$link">link</a></div>]

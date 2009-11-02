@@ -73,6 +73,7 @@ sub _build_indexes {
             entries  => $self->entries
         ),
         Blawd::Index->new(
+            title    => $self->title,
             filename => 'rss',
             renderer => RSS,
             entries  => $self->entries,
